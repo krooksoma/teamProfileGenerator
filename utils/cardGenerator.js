@@ -33,3 +33,7 @@ function addDataToPage (){
         newCard.push(cardSchool);
     }
 }
+finalArray.push(cardReturnedValue);
+
+
+const finalArray = [1,2,3 ,4, 5];
