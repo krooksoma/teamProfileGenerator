@@ -1,0 +1,29 @@
+{
+  "name": "teamprofilegenerator",
+  "version": "1.0.0",
+  "description": "Node.js developed application to deploy a HTML with team members card",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krooksoma/teamProfileGenerator.git"
+  },
+  "keywords": [
+    "team",
+    "cards",
+    "generator",
+    "node.js",
+    "jest"
+  ],
+  "author": "Romulo Goncalves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krooksoma/teamProfileGenerator/issues"
+  },
+  "homepage": "https://github.com/krooksoma/teamProfileGenerator#readme",
+  "dependencies": {
+    "inquirer": "^8.1.2"
+  }
+}
