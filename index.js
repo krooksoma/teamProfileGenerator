@@ -1,6 +1,6 @@
 // >>> line 87 here
 
-const htmlGenerator = requires("htmlGenerator");
+// const htmlGenerator = require("htmlGenerator");
 const inquirer = require("inquirer");
 
 
@@ -13,7 +13,7 @@ function collectData() {
     },    
   ])
   .then(val =>{
-    if(val.choice) {
+    if(val) {
         inquirer.prompt([
             {
                 input: "choice",
@@ -35,88 +35,89 @@ function collectData() {
 
 }
 
-function quit(){
-    console.log("Session finished!");
-    process.exit(0);
-}
+collectData();
+// function quit(){
+//     console.log("Session finished!");
+//     process.exit(0);
+// }
 
-function data (role){
-    if(role == "Manager"){
-        inquirer.prompt([
-            {
-                type: "input",
-                message: "what is the team member ID?",
-                name: "id",
-            },
-            {
-                type: "input",
-                message: "What is the team member name?",
-                name: "name",
-            },
-            {
-                type: "input",
-                message: "what is the team member email?",
-                name: "email",
-            },
-            {
-                type: "input",
-                message: "what is the team member office number?",
-                name: "officeNumber",
-            }
-        ]);
-    }else if(role == "Engineer"){
-        inquirer.prompt([
-            {
-                type: "input",
-                message: "what is the team member ID?",
-                name: "id",
-            },
-            {
-                type: "input",
-                message: "What is the team member name?",
-                name: "name",
-            },
-            {
-                type: "input",
-                message: "what is the team member email?",
-                name: "email",
-            },
-            {
-                type: "input",
-                message: "What is your github",
-        ]);
-        // Answer about approach taken below
-    }else{
-        employeeQuestions();        
-        inquirer.prompt([            
-            {
-                type: "input", 
-                message: "what is your school?",
-                name: "school",            
-            },
-        ]);
-    }
-}
+// function data (role){
+//     if(role == "Manager"){
+//         inquirer.prompt([
+//             {
+//                 type: "input",
+//                 message: "what is the team member ID?",
+//                 name: "id",
+//             },
+//             {
+//                 type: "input",
+//                 message: "What is the team member name?",
+//                 name: "name",
+//             },
+//             {
+//                 type: "input",
+//                 message: "what is the team member email?",
+//                 name: "email",
+//             },
+//             {
+//                 type: "input",
+//                 message: "what is the team member office number?",
+//                 name: "officeNumber",
+//             }
+//         ]);
+//     }else if(role == "Engineer"){
+//         inquirer.prompt([
+//             {
+//                 type: "input",
+//                 message: "what is the team member ID?",
+//                 name: "id",
+//             },
+//             {
+//                 type: "input",
+//                 message: "What is the team member name?",
+//                 name: "name",
+//             },
+//             {
+//                 type: "input",
+//                 message: "what is the team member email?",
+//                 name: "email",
+//             },
+//             {
+//                 type: "input",
+//                 message: "What is your github",
+//         ]);
+//         // Answer about approach taken below
+//     }else{
+//         employeeQuestions();        
+//         inquirer.prompt([            
+//             {
+//                 type: "input", 
+//                 message: "what is your school?",
+//                 name: "school",            
+//             },
+//         ]);
+//     }
+// }
 
 
-// Can I Do this???
+// // Can I Do this???
 
-function employeeQuestions (){
-    inquirer.prompt([
-        {
-            type: "input",
-            message: "what is the team member ID?",
-            name: "id",
-        },
-        {
-            type: "input",
-            message: "What is the team member name?",
-            name: "name",
-        },
-        {
-            type: "input",
-            message: "what is the team member email?",
-            name: "email",
-        },
-    ])
-}
+// function employeeQuestions (){
+//     inquirer.prompt([
+//         {
+//             type: "input",
+//             message: "what is the team member ID?",
+//             name: "id",
+//         },
+//         {
+//             type: "input",
+//             message: "What is the team member name?",
+//             name: "name",
+//         },
+//         {
+//             type: "input",
+//             message: "what is the team member email?",
+//             name: "email",
+//         },
+//     ])
+// }
