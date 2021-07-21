@@ -4,7 +4,7 @@
   "description": "Node.js developed application to deploy a HTML with team members card",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/krooksoma/teamProfileGenerator#readme",
   "dependencies": {
-    "inquirer": "^8.1.2"
+    "inquirer": "^8.1.2",
+    "jest": "^27.0.6"
   }
 }
