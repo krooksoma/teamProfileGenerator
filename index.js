@@ -4,6 +4,7 @@ const Manager = require("./lib/Manager");
 const Intern = require("./lib/Intern");
 const Employee = require("./lib/Employee");
 const cardGenerator = require("./dist/cardGenerator");
+const arrayString = [];
 
 function collectData() {
   inquirer
@@ -32,6 +33,12 @@ function collectData() {
     // call function to create manager card
     .then((val) => {
       const newManager = new Manager(val.id, val.name, val.email, val.officeNumber);
+      console.log("-------manager created--------");     
+      console.log(newManager.createManager());
+      
+    // need to send the date to the newly created member
+    // get back the whole string 
+    // JSON.stringify the data and add to the array.
     })
     .then(() =>
       inquirer.prompt([
@@ -42,6 +49,7 @@ function collectData() {
         },
       ])
     )
+    // add while loop here for add member inquirer?
     .then((val) => {
       if (val) {
         inquirer
