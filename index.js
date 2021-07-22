@@ -132,7 +132,7 @@ function data(role) {
         );
 
         arrayString.push(createEngineerCard(newEngineer));
-        console.log(arrayString);
+        
         addMember();
     })
     
@@ -167,7 +167,7 @@ function data(role) {
           intern.school,
         )
         arrayString.push(createInternCard(newIntern));
-        console.log(arrayString);
+        
         addMember();
     })
 }}

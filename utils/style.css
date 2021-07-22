@@ -1,0 +1,61 @@
+:root{
+    --primary: #1A1A1A;
+    --secondary: #474747;
+    --tertiary: #CCD6D8;
+    --complimentary: #F2B950;
+    --complimentary2: #EF7928;
+}
+*{   
+    font-size: 1.6;
+    width: 100%;
+    line-height: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html{
+    margin: 0;
+    background-color: var(--primary);
+}
+
+body{
+    background-color: var(--primary);
+    margin: 0 auto;
+    padding: 0 ;
+}
+
+h1{
+    font-size: 500%;
+    font-weight: bold;
+    color: var(--tertiary);
+}
+
+h2{
+    font-size: 250%;
+}
+
+h3{
+    font-size: 200%;
+}
+
+.jumbotron{
+    height: 25vh;
+    background-color: var(--secondary);
+}
+
+.card{
+    margin: 1.5rem;
+    box-shadow: 5px 10px 5px rgba(255, 255, 255, 0.3);
+}
+
+.card-title{
+    background-color: var(--complimentary);
+    font-size: 180%;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 0;
+}
+
+.btn{
+    background-color: var(--secondary);
+    color: var(--tertiary);
+}

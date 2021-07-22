@@ -24,13 +24,13 @@
     To install it git clone the folder into your machine, open the terminal on the folder where index.js is located and run command: "node index.js".
 
 ## Usage info
-    Use at your own discretion.
-
+    Video below to explain how to run application
+! [Usage Video](https://drive.google.com/file/d/1NRW065QUWZIPIjI_kpkFVsXNNE2dpth4/view)
 ## Contribution
     Any contribution can be done upon request.
 
 ## Test Instructions
-    undefined.    
+    Jest using command line: npm test   
 
 ## License
     This project is covered under MIT license.
