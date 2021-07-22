@@ -2,7 +2,9 @@ const inquirer = require("inquirer");
 const Engineer = require("./lib/Engineer");
 const Manager = require("./lib/Manager");
 const Intern = require("./lib/Intern");
-const cardGenerator = require("./dist/cardGenerator");
+const {createManagerCard, createEngineerCard, createInternCard} = require("./dist/cardGenerator");
+const webpage =require("./dist/htmlgenerator");
+const fs = require("fs");
 const arrayString = [];
 let i = 0;
 
@@ -40,17 +42,13 @@ function collectData() {
         val.email,
         val.officeNumber
       );
-      console.log("-------manager created--------");
-      console.log(newManager);
       
-      // ---need to send the data to the newly created member
-      createManagerCard(newManager);  
-
+      // send the data to the newly created member and push to string     
+      arrayString.push(createManagerCard(newManager))  
       
       addMember();
     });
-  // ---even when no is selected it does not quit execution
-  // ---make a function out of this add a member?
+  
 }
 function addMember() {
   inquirer
@@ -62,32 +60,40 @@ function addMember() {
       },
     ])    
     .then((val) => {
-      if (val) {
+      if (val.addMember) {
         inquirer
           .prompt([
             {
               type: "list",
               message: "Which team member would you like to add?",
               name: "userChoice",
-              choices: ["Engineer", "Intern", "exit"]
+              choices: ["Engineer", "Intern"]
             },
           ])
           //   gets the value of the option chosen and send it to data which runs the inquirer for that class
           .then((chosen) => {
-              if(chosen.userChoice === "exit"){
-                  quit();
-              }else{
+              
             data(chosen.userChoice);   
             
-              }
+              
           })
-        //   where to add the call for function add member? promise after data() is run?
-      } 
+        // if receives no calls for function to quit
+      } else {
+        quit();
+      }
     });
 
   function quit() {
-    console.log("Session finished!");
-    process.exit(0);
+    // creates the index.html file and populate it with the array of members
+    fs.writeFile("index.html", webpage(arrayString), (err) =>{
+      if(err){
+          console.log(err);
+      }else{
+          console.log('file succesfully created');
+          console.log("Session finished!");
+          process.exit(0);
+      }
+  })  
   }
 }
 
@@ -124,6 +130,9 @@ function data(role) {
           eng.email,
           eng.github,
         );
+
+        arrayString.push(createEngineerCard(newEngineer));
+        console.log(arrayString);
         addMember();
     })
     
@@ -136,17 +145,17 @@ function data(role) {
       },
       {
         type: "input",
-        message: "What is the team member name?",
+        message: "What is the Intern name?",
         name: "name",
       },
       {
         type: "input",
-        message: "what is the team member email?",
+        message: "what is the Intern email?",
         name: "email",
       },
       {
         type: "input",
-        message: "what is your school?",
+        message: "what is the Intern school?",
         name: "school",
       },
     ])
@@ -157,6 +166,8 @@ function data(role) {
           intern.email,
           intern.school,
         )
+        arrayString.push(createInternCard(newIntern));
+        console.log(arrayString);
         addMember();
     })
 }}

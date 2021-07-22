@@ -14,4 +14,20 @@ describe('Manager', () =>{
             expect(jonas).toEqual(testEmployee);
         })
     })
+    describe('Initialization', ()=>{
+        it("should retrieve the name of the Manager", () =>{
+            const testName = "Matthew";
+
+            const matthew = new Manager('Matthew', 4321, "jeb@email.com", 335568);
+            expect(matthew.getName()).toBe("Matthew");
+        })
+    })
+    describe('Initialization', ()=>{
+        it("should retrieve role", () =>{
+            const testOfficeNumber = "Manager";
+
+            const matthew = new Manager('Matthew', 4321, "jeb@email.com", 335568);
+            expect(matthew.getofficeNumber()).toBe(335568);
+        })
+    })
 })

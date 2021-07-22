@@ -15,4 +15,20 @@ describe('Engineer', () =>{
             expect(jonas).toEqual(testEmployee);
         })
     })
+    describe('Initialization', ()=>{
+        it("should retrieve the name of the Engineer", () =>{
+            const testName = "Jebediah";
+
+            const jebediah = new Engineer('Jebediah', 4321, "jeb@email.com", 'jebgit');
+            expect(jebediah.getName()).toBe("Jebediah");
+        })
+    })
+    describe('Initialization', ()=>{
+        it("should retrieve role", () =>{
+            const testName = "Engineer";
+
+            const jebediah = new Engineer('Jebediah', 4321, "jeb@email.com", 'jebgit');
+            expect(jebediah.getRole()).toBe("Engineer");
+        })
+    })
 })
