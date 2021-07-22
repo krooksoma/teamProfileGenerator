@@ -28,12 +28,14 @@
 
 ## Usage info
     Video below to explain how to run application
-! [Usage Video](https://drive.google.com/file/d/1NRW065QUWZIPIjI_kpkFVsXNNE2dpth4/view)
+![Usage Video](https://drive.google.com/file/d/1NRW065QUWZIPIjI_kpkFVsXNNE2dpth4/view)
 ## Contribution
     Any contribution can be done upon request.
 
 ## Test Instructions
-    Jest using command line: npm test   
+    Jest using command line: npm test  
+![Testing Usage Video](https://drive.google.com/file/d/12S2C0LYxsdM9NXPy19ldvFMnJ_lQyQnZ/view)    
+    
 
 ## License
     This project is covered under MIT license.
