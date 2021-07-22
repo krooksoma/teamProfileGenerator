@@ -18,10 +18,13 @@
     
 
 ## Description
-    This project is created with NODE.js, JavaScript, HTML, CSS, and Jest. Its main goal is to create team cards in the HTML using user given input. The cards categories include, Employee, Manager, Engineer, and Intern..
+    This project is created with NODE.js, JavaScript, HTML, CSS, and Jest.
+    Its main goal is to create team cards in the HTML using user given input.
+    The cards categories include: Manager, Engineer, and Intern.
 
 ## Installation Instructions
-    To install it git clone the folder into your machine, open the terminal on the folder where index.js is located and run command: "node index.js".
+    To install it git clone the folder into your machine, open the terminal on 
+    the folder where index.js is located and run command: "node index.js".
 
 ## Usage info
     Video below to explain how to run application
